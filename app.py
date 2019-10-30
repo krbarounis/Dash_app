@@ -3,12 +3,14 @@ import dash_core_components as dcc
 import dash_html_components as html
 import folium
 import pandas as pd
+import os
 import plotly.graph_objects as go
 from dash.dependencies import Input, Output
 from plotly.subplots import make_subplots
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server=app.server
+port = int(os.environ.get('PORT', 5000))
 
 df_2000=pd.read_csv('plotly_2000.csv').round(2)
 df_2010=pd.read_csv('plotly_2010.csv').round(2)
@@ -277,4 +279,4 @@ def update_graph(selected_product1, tractid1, tractid2):
                                    'tickfont': {'color': 'black'}})}
                 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(port=port)
