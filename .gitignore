@@ -2,6 +2,3 @@ venv
 *.pyc
 .DS_store
 .env
-
-csv
-*.csv
