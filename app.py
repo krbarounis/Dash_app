@@ -13,14 +13,19 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server=app.server
 port = int(os.environ.get('PORT', 5000))
 
-df_2000=pd.read_csv('plotly_2000.csv').round(2)
-df_2010=pd.read_csv('plotly_2010.csv').round(2)
-df_changes_sample=pd.read_csv('plotly_changes.csv').round(2)
-df_changes_full=pd.read_csv('plotly_changes_full.csv').round(2)
+url1 = 'https://raw.githubusercontent.com/krbarounis/Dash_app/master/plotly_2000.csv'
+url2='https://raw.githubusercontent.com/krbarounis/Dash_app/master/plotly_2010.csv'
+url3='https://raw.githubusercontent.com/krbarounis/Dash_app/master/plotly_changes.csv'
+url4='https://raw.githubusercontent.com/krbarounis/Dash_app/master/plotly_changes_full.csv'
+url5='https://raw.githubusercontent.com/krbarounis/Dash_app/master/clusters_and_2000.csv'
+df_2000=pd.read_csv(url1,sep=',').round(2)
+df_2010=pd.read_csv(url2,sep=',').round(2)
+df_changes_sample=pd.read_csv(url3,sep=',').round(2)
+df_changes_full=pd.read_csv(url4,sep=',').round(2)
 df_low=df_changes_sample[df_changes_sample.income_bracket=='Bottom 25% (<37k)']
 df_high=df_changes_sample[df_changes_sample.income_bracket=='Top 25% (> 63k)']
 df_middle=df_changes_sample[df_changes_sample.income_bracket=='Middle 50% (<63k and >37k)']
-df_clusters=pd.read_csv('clusters_and_2000.csv').round(2)
+df_clusters=pd.read_csv(url5,sep=',').round(2)
 
 fig = make_subplots(rows=1,cols=2,subplot_titles=('% Change in Rent vs. % Change in Income',
                     '% Change in Home Value vs. % Change in Income'))
