@@ -8,6 +8,7 @@ import plotly.graph_objects as go
 from dash.dependencies import Input, Output
 from plotly.subplots import make_subplots
 
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server=app.server
 port = int(os.environ.get('PORT', 5000))
@@ -20,9 +21,6 @@ df_low=df_changes_sample[df_changes_sample.income_bracket=='Bottom 25% (<37k)']
 df_high=df_changes_sample[df_changes_sample.income_bracket=='Top 25% (> 63k)']
 df_middle=df_changes_sample[df_changes_sample.income_bracket=='Middle 50% (<63k and >37k)']
 df_clusters=pd.read_csv('CSV_files/clusters_and_2000.csv').round(2)
-
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
 
 fig = make_subplots(rows=1,cols=2,subplot_titles=('% Change in Rent vs. % Change in Income',
                     '% Change in Home Value vs. % Change in Income'))
