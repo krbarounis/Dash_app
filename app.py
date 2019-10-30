@@ -20,7 +20,7 @@ df_changes_full=pd.read_csv('plotly_changes_full.csv').round(2)
 df_low=df_changes_sample[df_changes_sample.income_bracket=='Bottom 25% (<37k)']
 df_high=df_changes_sample[df_changes_sample.income_bracket=='Top 25% (> 63k)']
 df_middle=df_changes_sample[df_changes_sample.income_bracket=='Middle 50% (<63k and >37k)']
-df_clusters=pd.read_csv('CSV_files/clusters_and_2000.csv').round(2)
+df_clusters=pd.read_csv('clusters_and_2000.csv').round(2)
 
 fig = make_subplots(rows=1,cols=2,subplot_titles=('% Change in Rent vs. % Change in Income',
                     '% Change in Home Value vs. % Change in Income'))
