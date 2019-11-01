@@ -130,7 +130,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
     '''),
     html.H3(children='''Section 2: Investigating gentrification
     '''),
-    html.Div(children='''Using an algorithm that creates groups by finding commonalities amongst a set of data, I divided the census tracts in Suffolk County into three, and have subjectively labeled them as i) gentrifying, ii) becoming more affordable, and iii) remaining costly. I arrived at these labels by comparing the changes that occured within each cluster relative to the county average across 6 traditional indicators of gentrification. 
+    html.Div(children='''Using an algorithm that creates groups by finding commonalities amongst a set of data, I divided the census tracts in Suffolk County into three, and have subjectively labeled them as i) gentrifying, ii) becoming more affordable, and iii) remaining costly. I arrived at these labels by comparing the changes that occured within each cluster relative to the county average across 6 traditional indicators of gentrification. To get a better understanding of this concept, scroll over the radar plots below, comparing the values for the county average to the values for each cluster.
     '''),
     html.H5(children='''Cluster 1: Gentrifying
     '''),
@@ -168,6 +168,8 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
             )
         } 
     ),
+    html.Div(children='''This cluster represents neighborhoods that are gentrifying. In five of the six variables (those related to housing costs, education level, and owner occupancy), this group experienced larger increases than the county experienced. The exception is in the variable "% Change in Non-White Population", which for gentrifying areas, we'd expect to see a decline, as minority groups are often displaced during gentrification. The county experienced an average increase of 28% in its Non-White population, while this cluster saw an increase of 11%.
+    '''),
     html.H5(children='''Cluster 2: Becoming more affordable
    '''),
     
@@ -179,7 +181,6 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                   theta=['% Change in Household Income','% Change in Median Home Value','% Change in Median Rent', 
          '% Change in Owner Occupied Housing', '% Change in Non-White Population',
          '% Change in Population with College Degree'],
-                    fill='toself',
                     name='Cluster 2',
                                marker={
         'color':'green'
@@ -189,7 +190,6 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                   theta=['% Change in Household Income','% Change in Median Home Value','% Change in Median Rent', 
          '% Change in Owner Occupied Housing', '% Change in Non-White Population',
          '% Change in Population with College Degree'],
-                    fill='toself',
                   name='County Average',
                 marker={
         'color':'blue'
@@ -214,7 +214,6 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                   theta=['% Change in Household Income','% Change in Median Home Value','% Change in Median Rent', 
          '% Change in Owner Occupied Housing', '% Change in Non-White Population',
          '% Change in Population with College Degree'],
-                                fill='toself',
                     name='Cluster 3',
                                marker={
         'color':'orange'
@@ -224,7 +223,6 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                   theta=['% Change in Household Income','% Change in Median Home Value','% Change in Median Rent', 
          '% Change in Owner Occupied Housing', '% Change in Non-White Population',
          '% Change in Population with College Degree'],
-                    fill='toself',
                   name='County Average',
                 marker={
         'color':'blue'
