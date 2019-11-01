@@ -142,7 +142,6 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                   theta=['% Change in Household Income','% Change in Median Home Value','% Change in Median Rent', 
          '% Change in Owner Occupied Housing', '% Change in Non-White Population',
          '% Change in Population with College Degree'],
-                                fill='toself',
                     name='Cluster 1',
                                marker={
         'color':'red'
@@ -152,7 +151,6 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                   theta=['% Change in Household Income','% Change in Median Home Value','% Change in Median Rent', 
          '% Change in Owner Occupied Housing', '% Change in Non-White Population',
          '% Change in Population with College Degree'],
-                    fill='toself',
                   name='County Average',
                 marker={
         'color':'blue'
@@ -164,7 +162,8 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                         'visible':True,
                         'range':[-10,120],
                     }
-                }
+                },
+                paper_bgcolor='#1e2130',
             )
         } 
     ),
