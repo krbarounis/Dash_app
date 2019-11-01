@@ -160,13 +160,13 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                 polar={
                     'radialaxis':{
                         'visible':True,
-                        'range':[-10,120],
+                        'range':[-20,120],
                     }
                 }
             )
         } 
     ),
-    html.Div(children='''This cluster represents neighborhoods that are gentrifying. In five of the six variables (those related to housing costs, education level, and owner occupancy), this group experienced larger increases than the county experienced. The exception is in the variable "% Change in Non-White Population", which for gentrifying areas, we'd expect to see a decline, as minority groups are often displaced during gentrification. The county experienced an average increase of 28% in its Non-White population, while this cluster saw an increase of 11%.
+    html.Div(children='''This cluster represents neighborhoods that are gentrifying. In five of the six variables (those related to housing costs, education level, and owner occupancy), this group experienced larger increases relative to the county. The exception is in the variable "% Change in Non-White Population", which for gentrifying areas, we'd expect to see a decline, as minority groups are often displaced during gentrification. The county experienced an average increase of 28% in its Non-White population, while this cluster saw an increase of only 11%. While not a decline, this increase is 17% below the county average.
     '''),
     html.H5(children='''Cluster 2: Becoming more affordable
    '''),
@@ -196,7 +196,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                 polar={
                     'radialaxis':{
                         'visible':True,
-                        'range':[-10,120]
+                        'range':[-20,120]
                     }
                 }
             )
@@ -229,9 +229,10 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                 polar={
                     'radialaxis':{
                         'visible':True,
-                        'range':[-10,120]
+                        'range':[-20,120]
                     }
-                }
+                },
+                plot_bgcolor='aliceblue',
             )
         }
     ),
