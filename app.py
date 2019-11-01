@@ -162,8 +162,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                         'visible':True,
                         'range':[-10,120],
                     }
-                },
-                paper_bgcolor='#1e2130',
+                }
             )
         } 
     ),
