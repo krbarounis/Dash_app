@@ -202,7 +202,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
             )
         }
     ),
-    html.Div(children='''This cluster represents neighborhoods that are becoming more affordable. Housing costs increased less than the county average, median household income fell 12%, the number of owner occupied housing units fell nearly 8%, and the educated population rose only 2%.
+    html.Div(children='''This cluster represents neighborhoods that are becoming more affordable. Housing costs increased less than the county average, with median household income falling 12%, the number of owner occupied housing units falling nearly 8%, and the educated population rising only 2%.
     '''),
     html.H5(children='''Cluster 3: Becoming more costly 
     '''),
@@ -239,6 +239,8 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
         }
     ),
     html.Div(children='''This cluster represents neighborhoods that are becoming more costly. As mentioned in Section 1, Boston became less affordable as housing costs outpaced income growth. Neighborhoods in this group mostly match the county average across variables. Median rent and median home price increased 61% and 81% respectively, only slightly surpassing the county average of 54% and 76%, respectively.
+    '''),
+    html.H5(children='''Map of Suffolk County Census Tracts by Cluster 
     '''),
     html.Iframe(id='map',
                 srcDoc=open('index4.html','r').read(),width=500,height=600,
