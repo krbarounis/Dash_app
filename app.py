@@ -240,14 +240,16 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
     ),
     html.Div(children='''This cluster represents neighborhoods that are becoming more costly. As mentioned in Section 1, Boston became less affordable as housing costs outpaced income growth. Neighborhoods in this group mostly match the county average across variables. Median rent and median home price increased 61% and 81% respectively, only slightly surpassing the county average of 54% and 76%, respectively.
     '''),
-    html.H5(children='''Map of Suffolk County Census Tracts by Cluster 
-    '''),
+    html.H4(children='''Map of Suffolk County Census Tracts by Cluster 
+    ''',style={"textAlign": "center"}),
     html.Iframe(id='map',
                 srcDoc=open('index4.html','r').read(),width=500,height=600,
                 style={'width':'75%','padding-left':'12.5%','padding-right':'.5%'}),
     html.Div([
-    html.H2("Choose two tract IDs and a variable!", style={"textAlign": "center"}),
-    html.Div([html.Div([dcc.Dropdown(id='product-selected1',
+    html.H4("Choose two tract IDs and a variable!", style={"textAlign": "center"}),
+        html.Div(children='''To understand how census tracts and clusters differ from each other, use the tool below to compare two neighborhoods of your choice, using the Tract IDs from the map above or scrolling through the left two drop down menus, across any 1 of the 6 variables by toggling the right drop down menu''',style={"textAlign": "center"}),
+        
+        html.Div([html.Div([dcc.Dropdown(id='product-selected1',
                                      options=[{'label': i.title(), 'value': i} for i in df_clusters.columns.values[-7:-1]],
                                      value="Percent Change in Median Income")], className="six columns",
                        style={"width": "55%", "float": "right"}),
