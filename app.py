@@ -166,7 +166,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
             )
         } 
     ),
-    html.Div(children='''This cluster represents neighborhoods that are gentrifying. In five of the six variables (those related to housing costs, education level, and owner occupancy), this group experienced larger increases relative to the county. The exception is in the variable "% Change in Non-White Population", which for gentrifying areas, we'd expect to see a decline, as minority groups are often displaced during gentrification. The county experienced an average increase of 28% in its Non-White population, while this cluster saw an increase of only 11%. While not a decline, this increase is 17% below the county average.
+    html.Div(children='''This cluster represents neighborhoods that are gentrifying. In five of the six variables (those related to housing costs, education level, and owner occupancy), this group experienced larger increases relative to the county average, with the one exception being "% Change in Non-White Population. Minority groups are often displaced as a result gentrification, so we'd expect to see a decline in this variable. The county experienced an average increase of 28% in its Non-White population, while this cluster saw an increase of only 11%. While not a decline, this increase is 17% below the county average.
     '''),
     html.H5(children='''Cluster 2: Becoming more affordable
    '''),
@@ -202,7 +202,9 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
             )
         }
     ),
-    html.H5(children='''Cluster 3: Remaining costly 
+    html.Div(children='''This cluster represents neighborhoods that are becoming more affordable. Housing costs increased less than the county average, median household income fell 12%, the number of owner occupied housing units fell nearly 8%, and the educated population rose only 2%.
+    '''),
+    html.H5(children='''Cluster 3: Becoming more costly 
     '''),
     dcc.Graph(
         id='Fig5',
@@ -236,6 +238,8 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
             )
         }
     ),
+    html.Div(children='''This cluster represents neighborhoods that are becoming more costly. As mentioned in Section 1, Boston became less affordable as housing costs outpaced income growth. Neighborhoods in this group mostly match the county average across variables. Median rent and median home price increased 61% and 81% respectively, only slightly surpassing the county average of 54% and 76%, respectively.
+    '''),
     html.Iframe(id='map',
                 srcDoc=open('index4.html','r').read(),width=500,height=600,
                 style={'width':'75%','padding-left':'12.5%','padding-right':'.5%'}),
