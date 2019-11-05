@@ -166,9 +166,9 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
             )
         } 
     ),
-    html.Div(children='''This cluster represents neighborhoods that are gentrifying. In five of the six variables (those related to housing costs, education level, and owner occupancy), this group experienced larger increases relative to the county average, with the one exception being "% Change in Non-White Population. Minority groups are often displaced as a result gentrification, so we'd expect to see a decline in this variable. The county experienced an average increase of 28% in its Non-White population, while this cluster saw an increase of only 11%. While not a decline, this increase is 17% below the county average.
+    html.Div(children='''This cluster represents neighborhoods that are gentrifying. In this group, five of the six variables increased more than those of the county average (those related to housing costs, education level, and owner occupancy), with the one exception being "% Change in Non-White Population". Minority groups are often displaced as a result gentrification, so we'd expect to see a decline in this variable. The county experienced an average increase of 28% in its Non-White population, while this cluster saw an increase of only 11%. While not a decline, this increase is 17% below the county average.
     '''),
-    html.H5(children='''Cluster 2: Becoming more affordable
+    html.H5(children='''Cluster 2: Lagging behind
    '''),
     
     dcc.Graph(
@@ -202,9 +202,9 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
             )
         }
     ),
-    html.Div(children='''This cluster represents neighborhoods that are becoming more affordable. Housing costs increased less than the county average, with median household income falling 12%, the number of owner occupied housing units falling nearly 8%, and the educated population rising only 2%.
+    html.Div(children='''This cluster represents neighborhoods that aren't representative of Boston's overall upward trends in income, housing price, owner occupancy, and educated population. In contrast to the previous cluster, this group experienced declines in median household income and owner occupied housing units. The group experienced an increase of only 40% in median rent, while Boston saw an average growth of 54%. It also only experienced a 2% increase in population with a college degree, compared to the county average of 36%.
     '''),
-    html.H5(children='''Cluster 3: Becoming more costly 
+    html.H5(children='''Cluster 3: Representing the average 
     '''),
     dcc.Graph(
         id='Fig5',
@@ -238,7 +238,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
             )
         }
     ),
-    html.Div(children='''This cluster represents neighborhoods that are becoming more costly. As mentioned in Section 1, Boston became less affordable as housing costs outpaced income growth. Neighborhoods in this group mostly match the county average across variables. Median rent and median home price increased 61% and 81% respectively, only slightly surpassing the county average of 54% and 76%, respectively.
+    html.Div(children='''This cluster is representative of the county average, i.e. Boston overall, as the neighborhoods in this group generally experienced changes in line with those of the county average. We discussed those changes in Section 1. 
     '''),
     html.H4(children='''Map of Suffolk County Census Tracts by Cluster 
     ''',style={"textAlign": "center"}),
@@ -247,7 +247,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                 style={'width':'75%','padding-left':'12.5%','padding-right':'.5%'}),
     html.Div([
     html.H4("Choose two tract IDs and a variable!", style={"textAlign": "center"}),
-        html.Div(children='''To understand how census tracts and clusters differ from each other, use the tool below to compare two neighborhoods of your choice, using the Tract IDs from the map above or scrolling through the left two drop down menus, across any 1 of the 6 variables by toggling the right drop down menu''',style={"textAlign": "center"}),
+        html.Div(children='''To understand how census tracts and clusters differ from each other, use the tool below to compare two neighborhoods of your choice. Click the left two drop down menus to pick Tract IDs (see map for reference to geographic area) and use the right menu to pick any 1 of the 6 variables''',style={"textAlign": "center"}),
         
         html.Div([html.Div([dcc.Dropdown(id='product-selected1',
                                      options=[{'label': i.title(), 'value': i} for i in df_clusters.columns.values[-7:-1]],
