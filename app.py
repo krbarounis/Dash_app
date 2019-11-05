@@ -88,7 +88,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
     '''),
     dcc.Graph(figure=fig),
     
-    html.Div(children='''Adjusting for inflation, changes in median rent and median home value far outpaced changes in median household income on average. The median home value in the county's median tract rose 41% and the median rent in the county's median tract rose 24%. Additionally, housing costs rose in over 95% of tracts in the area. In contrast, only 61% of tracts saw increases in median household income, and the county's median tract saw an increase of only 10% in median household income.
+    html.Div(children='''Adjusting for inflation, changes in median rent and median home value outpaced changes in median household income. The median home value, median rent, and median household income in the county's median tract rose 41%, 24%, and 10% respectively. Additionally, housing costs rose in over 95% of tracts in the area, while only 61% of tracts saw increases in median household income.
     '''),
     html.H5(children='''The county saw an increase in income inequality
     '''),
@@ -126,11 +126,11 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                         }
                     }
              ),
-    html.Div(children='''61% of census tracts in the county experienced an increase in median household income between 2000 and 2010, while the remaining 49% experienced declines. Within the highest quartile of tracts by median income in 2000, 69% realized income gains,while only 46% of census tracts in the lowest quartile saw increases. Additionally, tracts in the lowest quartile experienced a larger decline overall than tracts in the highest quartile, falling an average of 23% and 11%, respectively.
+    html.Div(children='''61% of census tracts in the county experienced an increase in median household income between 2000 and 2010. Within the highest quartile of tracts by median income in 2000, 69% realized income gains,while only 46% of census tracts in the lowest quartile saw increases. Additionally, tracts in the lowest quartile experienced a larger income decline overall than tracts in the highest quartile, with income levels falling an average of 23% and 11%, respectively.
     '''),
     html.H3(children='''Section 2: Investigating gentrification
     '''),
-    html.Div(children='''Using an algorithm that creates groups by finding commonalities amongst a set of data, I divided the census tracts in Suffolk County into three, and have subjectively labeled them as i) gentrifying, ii) becoming more affordable, and iii) remaining costly. I arrived at these labels by comparing the changes that occured within each cluster relative to the county average across 6 traditional indicators of gentrification. To get a better understanding of this concept, scroll over the radar plots below, comparing the values for the county average to the values for each cluster.
+    html.Div(children='''Using an algorithm that creates groups by finding commonalities amongst a set of data, I divided the census tracts in Suffolk County into three, and have subjectively labeled them as i) gentrifying, ii) becoming more affordable, and iii) becoming more costly. I arrived at these labels by comparing the changes that occured within each cluster relative to the county average across 6 traditional indicators of gentrification. To get a better understanding of this concept, scroll over the radar plots below, and compare the values for the county average to the values for each cluster.
     '''),
     html.H5(children='''Cluster 1: Gentrifying
     '''),
@@ -160,7 +160,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                 polar={
                     'radialaxis':{
                         'visible':True,
-                        'range':[-20,120],
+                        'range':[-20,125],
                     }
                 }
             )
@@ -196,7 +196,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                 polar={
                     'radialaxis':{
                         'visible':True,
-                        'range':[-20,120]
+                        'range':[-20,125]
                     }
                 }
             )
@@ -231,7 +231,7 @@ Hispanics of any race, Asians, and other non-whites) grew by ~64,000 (an increas
                 polar={
                     'radialaxis':{
                         'visible':True,
-                        'range':[-20,120]
+                        'range':[-20,125]
                     }
                 },
                 plot_bgcolor='aliceblue',
